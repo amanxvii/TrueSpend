@@ -31,7 +31,7 @@ export default function AuthRoutesLayout() {
 
     <NativeTabs.Trigger name="add">
       <Label>Add</Label>
-      <Icon 
+      <Icon
       src={<VectorIcon family={MaterialCommunityIcons} name="plus-circle"/>}/>
     </NativeTabs.Trigger>
 
@@ -39,6 +39,8 @@ export default function AuthRoutesLayout() {
       <Label>Profile</Label>
       <Icon
       src={<VectorIcon family={MaterialCommunityIcons} name="account"/>}/>
+  
     </NativeTabs.Trigger>
+
   </NativeTabs>
 }

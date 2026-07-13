@@ -1,15 +1,20 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import SafeAreaView from '@/components/SafeAreaView'
+import SafeAreaView from "@/components/SafeAreaView";
+import { useExpenseStore } from "@/store/useExpenseStore";
+import React from "react";
+import { Text, View } from "react-native";
 
 const HomeScreen = () => {
+  const { userExpenses } = useExpenseStore();
+
+  console.log("userExpense:", userExpenses);
+
   return (
     <SafeAreaView>
       <View>
-        <Text>index hello</Text>
+        <Text>HomeScreen</Text>
       </View>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;

@@ -10,7 +10,7 @@ export type IExpenseItem = {
     title: string;
     category: string;
     amount: number;
-    expense_Date: string;
+    expenseDate: string;
 };
 
 export type IExpenseResponse = {expenses: IExpenseCategory};

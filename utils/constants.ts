@@ -12,6 +12,8 @@ const CATEGORY_KEY = {
   BILLS: "Bills",
 };
 
+const CATEGORIES = Object.values(CATEGORY_KEY);
+
 const MAP_CATEGORY_TO_ICON = {
   [CATEGORY_KEY.FOOD]:
     "https://cdn-icons-png.flaticon.com/128/5359/5359085.png",
@@ -35,4 +37,4 @@ const getFullDate = (timestamp: string) => {
   return formatted;
 };
 
-export { CATEGORY_KEY, getFullDate, MAP_CATEGORY_TO_ICON, OAUTH };
+export {CATEGORIES, CATEGORY_KEY, getFullDate, MAP_CATEGORY_TO_ICON, OAUTH };

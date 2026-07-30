@@ -1,5 +1,5 @@
 import { useExpenseStore } from "@/store/useExpenseStore";
-import { useAuth } from "@clerk/clerk-expo";
+import { useAuth } from "@clerk/expo";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Redirect } from "expo-router";
 import {

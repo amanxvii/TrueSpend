@@ -183,12 +183,12 @@ const AddScreen = () => {
           <Text className="dark:text-gray-suit text-gray-500 font-semibold text-sm">
             CATEGORY
           </Text>
-          <View className="gap-4 flex-row flex-wrap mt-2">
+          <View className="gap-4 flex-row flex-wrap mt-3">
             {Object.values(CATEGORY_KEY).map((category) => (
               <Text
                 key={category}
                 className={`text-black dark:text-melrose font-medium rounded-full 
-                          py-3 px-6      
+                          py-4 px-5      
                           ${
                             selectedCategory === category
                               ? "bg-royal-blue text-white"
@@ -217,7 +217,7 @@ ${selectedCategory === category ? "border border-royal-blue/70 dark:border-royal
               >
                 <Image
                   source={{ uri: MAP_CATEGORY_TO_ICON[category] }}
-                  style={{ width: 26, height: 26 }}
+                  style={{ width: 30, height: 30 }}
                 />
               </View>
             ))}

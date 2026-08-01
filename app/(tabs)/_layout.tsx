@@ -3,10 +3,7 @@ import { useAuth } from "@clerk/expo";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Redirect } from "expo-router";
 import {
-  Icon,
-  Label,
   NativeTabs,
-  VectorIcon,
 } from "expo-router/unstable-native-tabs";
 import { useEffect } from "react";
 
@@ -27,37 +24,25 @@ export default function AuthRoutesLayout() {
   }
 
   return (
-    <NativeTabs>
-      <NativeTabs.Trigger name="index">
-        <Label>Stats</Label>
-        <Icon
-          src={<VectorIcon family={MaterialCommunityIcons} name="chart-bar" />}
-        />
-      </NativeTabs.Trigger>
+    <NativeTabs labelVisibilityMode="labeled">
+        <NativeTabs.Trigger name="index">
+        <NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon sf="house.fill" md="home" />
+        </NativeTabs.Trigger>
 
-      <NativeTabs.Trigger name="expenses">
-        <Label>Expenses</Label>
-        <Icon
-          src={
-            <VectorIcon family={MaterialCommunityIcons} name="credit-card" />
-          }
-        />
+       <NativeTabs.Trigger name="expenses">
+      <NativeTabs.Trigger.Label>Expense</NativeTabs.Trigger.Label>
+      <NativeTabs.Trigger.Icon sf="list.bullet" md="list"/>
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="add">
-        <Label>Add</Label>
-        <Icon
-          src={
-            <VectorIcon family={MaterialCommunityIcons} name="plus-circle" />
-          }
-        />
+      <NativeTabs.Trigger.Label>Add</NativeTabs.Trigger.Label>
+      <NativeTabs.Trigger.Icon sf="plus.circle.fill" md="add_circle" />
       </NativeTabs.Trigger>
 
       <NativeTabs.Trigger name="profile">
-        <Label>Profile</Label>
-        <Icon
-          src={<VectorIcon family={MaterialCommunityIcons} name="account" />}
-        />
+      <NativeTabs.Trigger.Label>Profile</NativeTabs.Trigger.Label>
+      <NativeTabs.Trigger.Icon sf="person.fill" md="person_book" />
       </NativeTabs.Trigger>
     </NativeTabs>
   );

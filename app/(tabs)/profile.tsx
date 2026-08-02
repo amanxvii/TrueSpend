@@ -104,11 +104,11 @@ export default function ProfileScreen() {
 
       {/* Avatar */}
       <Pressable onPress={handlePickImage} className="self-center mb-8">
-        <View className="w-24 h-24 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 items-center justify-center">
+        <View className="w-50 h-50 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 items-center justify-center">
           {uploadingImage ? (
             <ActivityIndicator />
           ) : user?.imageUrl ? (
-            <Image source={{ uri: user.imageUrl }} className="w-24 h-24" />
+            <Image source={{ uri: user.imageUrl }} className="w-50 h-50" />
           ) : (
             <Text className="text-3xl text-neutral-500">
               {firstName?.[0]?.toUpperCase() ?? '?'}
@@ -124,7 +124,7 @@ export default function ProfileScreen() {
         <TextInput
           value={firstName}
           onChangeText={setFirstName}
-          className="border border-neutral-300 dark:border-neutral-700 rounded-xl px-4 py-3 text-neutral-900 dark:text-white"
+          className="border border-neutral-300 dark:border-neutral-700 rounded-xl px- py-3 text-neutral-900 dark:text-white"
           placeholder="First name"
         />
       </View>
@@ -163,7 +163,7 @@ export default function ProfileScreen() {
 
       <Pressable
         onPress={handleSignOut}
-        className="rounded-xl py-3 items-center border border-red-500"
+        className="rounded-xl py-3 items-center"
       >
         <Text className="text-red-500 font-semibold">Sign out</Text>
       </Pressable>
